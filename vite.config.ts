@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
       // For GitHub Pages deployment, change base to your repository name:
       // base: '/your-repo-name/', 
       // Or use './' for relative paths if not using subdirectories
-      base: '/', 
+      base: '/HuggingMath', 
       server: {
         port: 3000,
         host: '0.0.0.0',
