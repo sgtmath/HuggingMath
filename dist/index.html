@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-g" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HuggingMath</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'serif': ['Lora', 'serif'],
+            },
+            colors: {
+              'brand-dark': '#cad3f5', // Catppuccin Macchiato Text
+              'brand-light': '#24273a', // Catppuccin Macchiato Base
+              'brand-accent': '#c6a0f6', // Catppuccin Macchiato Mauve
+              'brand-accent-light': '#b7bdf8', // Catppuccin Macchiato Lavender
+              'ctp-rosewater': '#f4dbd6',
+              'ctp-flamingo': '#f0c1c2',
+              'ctp-pink': '#f5bde6',
+              'ctp-mauve': '#c6a0f6',
+              'ctp-red': '#ed8796',
+              'ctp-maroon': '#ee99a0',
+              'ctp-peach': '#f5a97f',
+              'ctp-yellow': '#eed49f',
+              'ctp-green': '#a6da95',
+              'ctp-teal': '#8bd5ca',
+              'ctp-sky': '#91d7e3',
+              'ctp-sapphire': '#7dc4e4',
+              'ctp-blue': '#8aadf4',
+              'ctp-lavender': '#b7bdf8',
+              'ctp-text': '#cad3f5',
+              'ctp-subtext1': '#b8c0e0',
+              'ctp-subtext0': '#a5adcb',
+              'ctp-overlay2': '#939ab7',
+              'ctp-overlay1': '#8087a2',
+              'ctp-overlay0': '#6e738d',
+              'ctp-surface2': '#5b6078',
+              'ctp-surface1': '#494d64',
+              'ctp-surface0': '#363a4f',
+              'ctp-base': '#24273a',
+              'ctp-mantle': '#1e2030',
+              'ctp-crust': '#181926',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes scaleIn {
+        from { transform: scale(0.95); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+      .animate-scale-in {
+        animation: scaleIn 0.3s ease-out forwards;
+      }
+      .prose-ctp {
+        --tw-prose-body: #cad3f5;
+        --tw-prose-headings: #c6a0f6;
+        --tw-prose-lead: #b8c0e0;
+        --tw-prose-links: #c6a0f6;
+        --tw-prose-bold: #cad3f5;
+        --tw-prose-counters: #939ab7;
+        --tw-prose-bullets: #494d64;
+        --tw-prose-hr: #363a4f;
+        --tw-prose-quotes: #cad3f5;
+        --tw-prose-quote-borders: #c6a0f6;
+        --tw-prose-captions: #a5adcb;
+        --tw-prose-code: #c6a0f6;
+        --tw-prose-pre-code: #cad3f5;
+        --tw-prose-pre-bg: #1e2030;
+        --tw-prose-th-borders: #494d64;
+        --tw-prose-td-borders: #363a4f;
+      }
+    </style>
+
+<!-- Add Babel for in-browser transpilation of TSX -->
+<script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-ctp-base text-ctp-text font-sans selection:bg-ctp-mauve/30 selection:text-ctp-mauve">
+    <div id="root"></div>
+    <!-- Load the main TSX file, which Babel will transpile -->
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.1.0",
+    "react-markdown": "https://esm.sh/react-markdown@^9.0.0",
+    "remark-math": "https://esm.sh/remark-math@^6.0.0",
+    "rehype-katex": "https://esm.sh/rehype-katex@^7.0.0"
+  }
+}
+</script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="./index.tsx"></script>
+  </body>
+</html>
